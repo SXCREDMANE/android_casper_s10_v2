@@ -1,0 +1,30 @@
+#Architechture Settings
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_VARIANT := cortex-a7
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+
+#Recovery Partition Specs
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+#Prebuilt Kernel Path
+TARGET_PREBUILT_KERNEL := device/casper/s10_v2/kernel
+BOARD_MKBOOTIMG_ARGS := --base 80000000 --pagesize 2048
+
+#Display Resolution
+TW_THEME := portrait_mdpi
+TARGET_SCREEN_WIDTH := 800
+TARGET_SCREEN_HEIGHT := 1280
+RECOVERY_GRAPHICS_USE_HEADER_2 := true
+
+#TWRP Feature Flags
+TW_NO_EXFAT := false
+TWHAVE_SELINUX := true
+TW_ALLOW_EXFAT := true
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 160
+TW_INCLUDE_FB2PNG := true
+TWRP_INCLUDE_LOGCAT := true
