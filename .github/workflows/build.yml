@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout Workflow
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Clean and Prepare Disk Space
       run: |
@@ -55,7 +55,7 @@ jobs:
         make recoveryimage -j$(nproc --all)
 
     - name: Upload Recovery Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: TWRP_Casper_S10_V2
         path: /home/runner/twrp/out/target/product/s10_v2/recovery.img
