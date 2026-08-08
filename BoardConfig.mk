@@ -13,6 +13,13 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 #Ramdisk Compression
 LZMA_RAMDISK_TARGETS := recovery
 TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_MTP := true
+TW_EXCLUDE_PYTHON := true
+TW_EXCLUDE_TZDATA := true
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_BASH := true
+TW_INCLUDE_CRYPTO := false
+TW_EXCLUDE_DEFAULT_GRID := true
 
 #Prebuilt Kernel Path
 TARGET_PREBUILT_KERNEL := device/casper/s10_v2/kernel
@@ -25,7 +32,9 @@ TARGET_SCREEN_HEIGHT := 1280
 RECOVERY_GRAPHICS_USE_HEADER_2 := true
 
 #TWRP Feature Flags
-TW_NO_EXFAT := false
+TW_NO_EXFAT := true
+TW_NO_EXFAT_FUSE := true
+TW_NO_NTFS := true
 TWHAVE_SELINUX := true
 TW_ALLOW_EXFAT := true
 TW_MAX_BRIGHTNESS := 255
