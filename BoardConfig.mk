@@ -7,8 +7,12 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 
 #Recovery Partition Specs
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x1000000
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+#Ramdisk Compression
+LZMA_RAMDISK_TARGETS := recovery
+TW_EXCLUDE_SUPERSU := true
 
 #Prebuilt Kernel Path
 TARGET_PREBUILT_KERNEL := device/casper/s10_v2/kernel
